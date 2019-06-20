@@ -123,6 +123,11 @@ public class Data {
         this.invoiceLines = invoiceLines;
     }
 
+    /** Code zet data van database om naar JavaObject
+     *
+     * @param rs
+     * @return
+     */
     public static Data fromResultSet(ResultSet rs) {
         try {
             String straat = rs.getString("straat");

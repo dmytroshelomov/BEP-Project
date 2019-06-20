@@ -19,7 +19,7 @@ public class KlantMysqlImpl {
     private ResultSet result;
 
     /**
-     * Return entries matching {@code month}
+     * Return entries matching {@code month} from mysql
      *
      * @param month int
      * @return matching entries if any
@@ -87,6 +87,12 @@ public class KlantMysqlImpl {
         );
     }
 
+    /**Standaard code om statements te laten werken
+     *
+     * @param statement
+     * @return
+     * @throws SQLException
+     */
     public PreparedStatement prepare(final String statement) throws SQLException {
         return this.prepare(statement, Statement.NO_GENERATED_KEYS);
     }
