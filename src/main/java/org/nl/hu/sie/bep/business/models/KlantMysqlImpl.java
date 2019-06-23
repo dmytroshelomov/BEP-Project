@@ -49,6 +49,10 @@ public class KlantMysqlImpl {
 
                     dd.note = e.getString("note");
                     dd.invoiceLines = e.getList("invoiceLines", Document.class);
+                    dd.InvoiceID = e.getDouble("invoiceId");
+                    dd.Date = e.getDate("date");
+
+
 
                     data.add(dd);
                 }

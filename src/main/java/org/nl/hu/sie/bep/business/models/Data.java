@@ -4,6 +4,7 @@ import org.bson.Document;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 
 public class Data {
@@ -31,6 +32,8 @@ public class Data {
     public String Geslacht;
     public String note;
     public List<Document> invoiceLines;
+    public java.util.Date Date;
+    public double InvoiceID;
 
     public Data(String straat,
                 String type,
@@ -53,6 +56,7 @@ public class Data {
                 String fax,
                 String geslacht,
                 String note
+
     ) {
         Straat = straat;
         Type = type;
@@ -75,53 +79,13 @@ public class Data {
         Fax = fax;
         Geslacht = geslacht;
         note = note;
+
+
     }
 
-    public Data(String straat,
-                String type,
-                String huisnummer,
-                String postcode,
-                String plaats,
-                String BIC,
-                int klantID,
-                int persoonID,
-                String bedrijfsnaam,
-                String rechtsvorm,
-                String VAT,
-                String bankRek,
-                String giro,
-                String bik,
-                String voornaam,
-                String tussenvoegsel,
-                String achternaam,
-                String telefoon,
-                String fax,
-                String geslacht,
-                String note,
-                List<Document> invoiceLines) {
-        this(straat,
-                type,
-                huisnummer,
-                postcode,
-                plaats,
-                BIC,
-                klantID,
-                persoonID,
-                bedrijfsnaam,
-                rechtsvorm,
-                VAT,
-                bankRek,
-                giro,
-                bik,
-                voornaam,
-                tussenvoegsel,
-                achternaam,
-                telefoon,
-                fax,
-                geslacht,
-                note);
-        this.invoiceLines = invoiceLines;
-    }
+
+
+
 
     /** Code zet data van database om naar JavaObject
      *
@@ -173,6 +137,7 @@ public class Data {
                     fax,
                     geslacht,
                     ""
+
             );
         } catch (SQLException ex) {
             ex.printStackTrace();
@@ -205,6 +170,8 @@ public class Data {
                 ", Geslacht='" + Geslacht + '\'' +
                 ", note='" + note + '\'' +
                 ", invoiceLines='" + invoiceLines + '\'' +
+                ", invoiceID=" + InvoiceID + '\'' +
+                ", Date=" + Date + '\'' +
                 '}';
     }
 }

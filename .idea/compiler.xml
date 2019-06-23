@@ -7,7 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="BEP Project" />
+        <module name="business" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="business" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
